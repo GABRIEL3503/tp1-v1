@@ -36,9 +36,7 @@ class Cine
 
     public function setEsEstudiante($esEstudiante)
     {
-        // El checkbox llega como "on" o no llega; lo convertimos a bool
-        $this->esEstudiante = ($esEstudiante === true || $esEstudiante === "on");
-    }
+        $this->esEstudiante = ($esEstudiante === "on");    }
 
     // 4. Métodos de comportamiento
 
