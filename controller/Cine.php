@@ -64,10 +64,12 @@ class Cine
     
     public function cargarObjeto($datos)
     {
+
+   // Llama a sonDatosValidos(). Si los datos no son válidos no carga nada y retorna false inmediatamente.
         if (!$this->sonDatosValidos($datos)) {
             return false;
         }
-
+//Si son válidos, carga los atributos:
         $this->setEdad($datos['edad']);
         // El checkbox solo aparece en $_POST si fue tildado
         $this->setEsEstudiante(isset($datos['estudiante']) ? $datos['estudiante'] : false);
